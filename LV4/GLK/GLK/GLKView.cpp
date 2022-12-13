@@ -166,20 +166,12 @@ void CGLKView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	// TODO: Add your message handler code here and/or call default
 	int step = 5;
 	switch (nChar) {
-		case VK_UP:
-			m_glRenderer.AngleCX(step);
-			Invalidate();
-			break;
-		case VK_DOWN:
-			m_glRenderer.AngleCX(-step);
-			Invalidate();
-			break;
 		case VK_LEFT:
-			m_glRenderer.AngleCY(-step);
+			m_glRenderer.AngleAdd();
 			Invalidate();
 			break;
 		case VK_RIGHT:
-			m_glRenderer.AngleCY(step);
+			m_glRenderer.AngleSub();
 			Invalidate();
 			break;
 		default:

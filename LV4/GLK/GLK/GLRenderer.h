@@ -32,12 +32,12 @@ public:
 
 	void SetAngles(float angle_h, float angle_v);
 
-	inline void AngleCX(int angle) {
-		angle_cx += angle;
+	inline void AngleAdd() {
+		arm_angle += 10;
 	}
 
-	inline void AngleCY(int angle) {
-		angle_cy += angle;
+	inline void AngleSub() {
+		arm_angle -= 10;
 	}
 
 
